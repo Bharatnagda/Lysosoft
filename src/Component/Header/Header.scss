@@ -1,0 +1,56 @@
+@import "../../Assets/Scss/style.scss";
+.header-section{
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    // width: 100%;
+    right: 0;
+    left: 0;
+    padding: $space15 $space30+2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000;
+    border-bottom: 1px solid #fff;
+    // &.is-sticky {
+    //     position: fixed;
+    //     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+    //     backdrop-filter: blur(10px);
+    //     animation: slideDown 0.35s ease-out;
+    //   }      
+    .header-title{
+        color: #fff;
+        font-family: roboto_bold;
+        font-size: 34px;
+    }
+    .services-list{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        .single-list{
+            a{
+                color: #fff;
+            }
+            font-size: 16px;
+            color: #fff;
+            opacity: 0.6;
+            font-family: roboto_reg;
+            cursor: pointer;
+            margin-left: 16px;
+            &:hover{
+                opacity: 1;
+            }
+            &:nth-last-child(1){
+                margin-left: 120px;
+            }
+        }
+    }
+}
+@keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }

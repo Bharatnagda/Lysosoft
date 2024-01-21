@@ -1,12 +1,11 @@
-
-
+import Header from "./Component/Header/Header"
+import Footer from "./Component/Footer/Footer"
 function App() {
-
   return (
     <>
-      <h1>Lysosoft in progress</h1>
+      <Header/>
+      <Footer/>
     </>
   )
 }
-
 export default App
