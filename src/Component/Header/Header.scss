@@ -3,7 +3,6 @@
     z-index: 999;
     position: sticky;
     top: 0;
-    // width: 100%;
     right: 0;
     left: 0;
     padding: $space15 $space30+2;
@@ -12,15 +11,16 @@
     justify-content: space-between;
     background-color: #000;
     border-bottom: 1px solid #fff;
-    // &.is-sticky {
-    //     position: fixed;
-    //     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
-    //     backdrop-filter: blur(10px);
-    //     animation: slideDown 0.35s ease-out;
-    //   }      
+    &.is-sticky {
+        position: fixed;
+        box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        animation: slideDown 0.35s ease-out;
+      }      
     .header-title{
         color: #fff;
-        font-family: roboto_bold;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
         font-size: 34px;
     }
     .services-list{
@@ -34,7 +34,8 @@
             font-size: 16px;
             color: #fff;
             opacity: 0.6;
-            font-family: roboto_reg;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
             cursor: pointer;
             margin-left: 16px;
             &:hover{

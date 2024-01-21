@@ -43,7 +43,7 @@ function Footer() {
                         <span className="card-span">contact</span>
                     <ul className="card-ul">
                         <li className="card-li">
-                            <a href="javascript:;" className="li-link">lysosoft@gmail.com</a>
+                            <a href = "mailto: lysosoft@gmail.com" className="li-link">lysosoft@gmail.com</a>
                         </li>
                         {/* address link will be remote */}
                     </ul>

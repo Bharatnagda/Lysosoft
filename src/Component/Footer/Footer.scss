@@ -18,8 +18,10 @@
                 text-transform: capitalize;
                 color: hsla(0,0%,100%,.5);
                 font-size: 10px;
+                font-family: "Roboto", sans-serif;
+                font-weight: 100;
                 line-height: 1;
-                font-family: roboto_reg;
+                // font-family: roboto_reg;
             }
             .card-ul{
                 .card-li{
@@ -27,7 +29,9 @@
                     .li-link{
                         color: #fff;
                         font-size: 16px;
-                        font-family: roboto_med;
+                        // font-family: roboto_med;
+                        font-family: "Roboto", sans-serif;
+                        font-weight: 500;
                     }
                     &:first-child{
                         margin-top: 0;
@@ -46,11 +50,15 @@
                 .legal-page{
                     color: #fff;
                     font-size: 14px;
-                    font-family: roboto_reg;
+                    // font-family: roboto_reg;
+                    font-family: "Roboto", sans-serif;
+                    font-weight: 400;
                 }
                 .copy-right{
                     color: #fff;
-                    font-family: roboto_bold;
+                    // font-family: roboto_bold;
+                    font-family: "Roboto", sans-serif;
+                    font-weight: 500;
                     font-size: 30px;
 
                 }
