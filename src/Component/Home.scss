@@ -1,0 +1,91 @@
+@import "../../Assets/Scss/style.scss";
+
+.home-section{
+    .card-title{
+        font-family: "Montserrat";
+        font-size: 36px;
+        line-height: 1.2;
+        font-weight: 600;
+        color: #fff;
+    }
+    .card-desc{
+        font-size: 16px;
+        font-family: "Montserrat";
+        line-height: 130%;
+        font-weight: 400;
+        color: #fff;
+    }
+    .action-btn{
+        padding: 8px 16px;
+        font-size: 14px;
+        font-family: "Montserrat";
+        font-weight: 400;
+        color: #fff;
+        opacity: 0.8;
+        background-color: hsla(0,0%,100%,.2);
+        display: inline-block;
+        border-radius: 0.25rem;
+    }
+    .hero-card{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+        gap: 2rem;
+        .left-card{
+            width: 65%;
+            min-height: 32rem;
+            padding-top: 4rem;
+            padding-left: 1.25rem;
+            background: #747579;
+            border-radius: 2rem;
+            .text-box{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.5rem;
+                width: 31rem;
+                
+            }
+        }
+        .right-card{
+            position: relative;
+            background: #747579;
+            width: 32%;
+            border-radius: 2rem;
+            padding-top: 4rem;
+            .card-head{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                position: absolute;
+                left: 1.25rem;
+                top: 1.25rem;
+                right: auto;
+                bottom: auto;
+                z-index: 20;
+                padding: 0.25rem 0.375rem;
+                background: #0038ff;
+                color: #fff;
+                border-radius: 0.25rem ;
+                font-family: "Montserrat";
+                font-size: .875rem;
+                line-height: 1;
+                font-weight: 600;
+                .card-svg{
+                    display: block;
+                    vertical-align: middle;
+                }
+            }
+            .text-box{
+                display: flex;
+                max-width: 19rem;
+                padding-left: 1.25rem;
+                flex-direction: column;
+                justify-content: flex-end;
+                grid-row-gap: 0.5rem;
+            }
+        }
+    }
+}
