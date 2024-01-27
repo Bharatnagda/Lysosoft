@@ -16,10 +16,10 @@
             gap: 15px;
             .card-span{
                 text-transform: capitalize;
-                color: hsla(0,0%,100%,.5);
-                font-size: 10px;
-                font-family: "Roboto";
-                font-weight: 100;
+                color: rgba(255, 255, 255, 0.50);
+                font-size: 11px;
+                font-family: "Montserrat";
+                font-weight: 600;
                 line-height: 1;
                 // font-family: roboto_reg;
             }
@@ -30,7 +30,7 @@
                         color: #fff;
                         font-size: 17px;
                         // font-family: roboto_med;
-                        font-family: "Roboto";
+                        font-family: "Montserrat";
                         font-weight: 400;
                     }
                     &:first-child{
@@ -51,16 +51,44 @@
                     color: #fff;
                     font-size: 14px;
                     // font-family: roboto_reg;
-                    font-family: "Roboto";
+                    font-family: "Montserrat";
                     font-weight: 400;
                 }
                 .copy-right{
                     color: #fff;
                     // font-family: roboto_bold;
-                    font-family: "Roboto";
+                    font-family: "Montserrat";
                     font-weight: 500;
                     font-size: 30px;
 
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:450px) {
+    .footer-section{
+        .footer-nav-card{
+            padding: 22px 8px 13px ;
+            gap: 34px;
+            justify-content: flex-start;
+            flex-direction: column;
+            .single-card{
+                gap: 5px;
+                flex-direction: column;
+                .card-ul{
+                    display: flex;
+                    align-items: baseline;
+                    gap: 10px;
+                    .card-li{
+                        .li-link{
+                            font-weight: 500;
+                        }
+                    }
+                }
+                &.legal{
+                    flex-direction: row;
                 }
             }
         }
