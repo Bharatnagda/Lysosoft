@@ -1,4 +1,5 @@
 @import "../../Assets/Scss/style.scss";
+
 .header-section{
     z-index: 999;
     position: sticky;
@@ -19,7 +20,7 @@
       }      
     .header-title{
         color: #fff;
-        font-family: "Roboto";
+        font-family:"Montserrat Alternates";
         font-weight: 500;
         font-size: 34px;
     }
@@ -34,7 +35,7 @@
             font-size: 20px;
             color: #fff;
             opacity: 0.6;
-            font-family: "Roboto";
+            font-family: "Montserrat";
             font-weight: 400;
             cursor: pointer;
             margin-left: 16px;
@@ -46,6 +47,12 @@
             }
         }
     }
+    .m-menu{
+        display: none;
+    }
+    .m-sidebar{
+        display: none;
+    }
 }
 @keyframes slideDown {
     from {
@@ -55,3 +62,84 @@
       transform: translateY(0);
     }
   }
+
+@media screen and (max-width:450px) {
+    .header-section{
+        .services-list{
+            display: none;
+        }
+        .m-menu{
+            display: block;
+            color: #fff;
+            font-family: "Montserrat";
+            font-weight: 400;
+            font-size: 15px;
+        }
+        .m-sidebar{
+            padding: 15px;
+            display: block;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background: #006ac9;
+            .side-top-head{
+                display: flex;
+                justify-content: space-between;
+                .logo{
+                    color: #FFF;
+                    font-family: "Montserrat";
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 21.36px;
+                }
+                .close-btn{
+                    color: #FFF;
+                    font-family: "Montserrat";
+                    font-size: 14.224px;
+                    font-weight: 400;
+                    line-height: 21.36px;
+                }
+            }
+            .menu-link{
+                margin-top: 5.25rem;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                .single-menu{
+                    .li-link{
+                        font-size: 32px;
+                        color: #fff;
+                        font-family: "Montserrat";
+                    }
+                }
+            }
+            .contact-card{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                margin: auto auto 10px auto;
+                .single-contact{
+                    display: inline-flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    .contact-title{
+                        color: #fff;
+                        font-size: 14px;
+                        font-family: "Montserrat";
+                        display: block;
+                    }
+                    .contact-link{
+                        font-size: 18px;
+                        font-family: "Montserrat";
+                        color: #fff;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    
+}
