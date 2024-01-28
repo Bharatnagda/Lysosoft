@@ -1,5 +1,7 @@
 import './Home.scss';
-
+import service from '../../Assets/Images/service1.jpg';
+import service2 from '../../Assets/Images/service2.jpg';
+import service3 from '../../Assets/Images/service3.jpg';
 function Home(){
     return (
         <>
@@ -25,11 +27,32 @@ function Home(){
                             <p className="card-desc">Read more about the custom solutions we built for a wide range of clients.</p>
                             <a href="javascript:;" className="card-redirect">
                                 <span className="redirect-svg">
-
+                                ↗
                                 </span>
                             </a>
                         </div>
-                        
+                        <div className="service-box">
+                            <a href="javascript:;" className="sinlge-service">
+                                <img src={service} alt="" />
+                                <span className="service-title">Verifone ↗</span>
+                            </a>
+                            <a href="javascript:;" className="sinlge-service">
+                                <img src={service2} alt="" />
+                                <span className="service-title">Verifone ↗</span>
+                            </a>
+                            <a href="javascript:;" className="sinlge-service">
+                                <img src={service3} alt="" />
+                                <span className="service-title">Verifone ↗</span>
+                            </a>
+                            <a href="javascript:;" className="sinlge-service">
+                                <img src={service} alt="" />
+                                <span className="service-title">Verifone ↗</span>
+                            </a>
+                            <a href="javascript:;" className="sinlge-service">
+                                <img src={service2} alt="" />
+                                <span className="service-title">Verifone ↗</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

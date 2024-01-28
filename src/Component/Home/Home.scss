@@ -22,9 +22,27 @@
         font-weight: 400;
         color: #fff;
         opacity: 0.8;
-        background-color: hsla(0,0%,100%,.2);
-        display: inline-block;
+        background-color: #747579;
         border-radius: 0.25rem;
+        display: inline-block;
+        overflow: hidden;
+        position: relative;
+        &:before,&:after{
+            background: #9D00FF;
+            content: '';
+            position: absolute;
+            z-index: -1;
+        }
+        &:after{
+            height: 100%;
+            left: -35%;
+            top: 0;
+            transform: skew(50deg);
+            transition-duration: 0.6s;
+            transform-origin: top left;
+            width: 0;
+        }
+        
     }
     .hero-card{
         padding-top: 2rem;
@@ -34,12 +52,28 @@
         flex-wrap: wrap;
         gap: 2rem;
         .left-card{
+            // background: linear-gradient(to right, #AA5555, #E56E61, #4545CE);
+            // background: linear-gradient(to right, rgba(170, 85, 85, 0.5), rgba(229, 110, 97, 0.8), rgba(69, 69, 206, 1));
+            
+            background: url(../../Assets/Images/gradient1.png) right #000;
+            background-size: cover;
             width: 65%;
             min-height: 32rem;
             padding-top: 4rem;
             padding-left: 1.25rem;
-            background: #747579;
             border-radius: 2rem;
+            transition: 0.5s all ease-in-out;
+            &:hover{
+                transition: 0.5s all ease-in-out;
+                box-shadow: 0 0 20px rgb(255,255,255,.5);
+                .action-btn:hover{
+                        color: #fff;
+                        &:after{
+                            height: 100%;
+                            width: 135%;
+                        }
+                }
+            }
             .text-box{
                 display: flex;
                 flex-direction: column;
@@ -50,11 +84,38 @@
             }
         }
         .right-card{
+            background: url(../../Assets/Images/gradient2.png) right #000;
+            background-size: cover;
             position: relative;
-            background: #747579;
             width: 32%;
             border-radius: 2rem;
             padding-top: 4rem;
+            transition: 0.5s all ease-in-out;
+            overflow: hidden;
+            .redirect-svg{
+                position: absolute;
+                top: 1.25rem;
+                right: 1.25rem;
+                visibility: hidden;
+                transition: 0.5s all ease-in-out;
+                font-size: 0.875rem;
+                background: hsla(0,0%,100%,.2);
+                border-radius: 0.5rem;
+                padding: 0.75rem;
+                color: #fff;
+                transform: translateY(20px);
+                display: block;
+                cursor: pointer;
+            }
+            &:hover{
+                transition: 0.5s all ease-in-out;
+                box-shadow: 0 0 5px rgb(255,255,255,.5);
+                .redirect-svg{
+                    transform: translateY(0);
+                    visibility: visible;
+                    transition: 0.5s all ease-in-out;
+                }
+            }
             .card-head{
                 display: flex;
                 align-items: center;
@@ -85,6 +146,59 @@
                 flex-direction: column;
                 justify-content: flex-end;
                 grid-row-gap: 0.5rem;
+                margin-bottom: 50px;
+            }
+            .service-box{
+                transform: rotate(-15deg);
+                display: flex;
+
+                .marq-class{
+                    display: flex;
+                }
+                .sinlge-service{
+                    display: inline-block;
+                    white-space: normal;
+                    animation: autoslide 6s linear infinite;
+                    border-radius: 0.5rem;
+                    width: 50%;
+                    margin: 0 10px;
+                    transform: translate(50px,50px);
+                    position: relative;
+                    img{
+                        width: 13.5rem;
+                        border-radius: 0.5rem;
+                        height: auto;
+                        filter:opacity(0.6);
+                    }
+                    .service-title{
+                        position: absolute;
+                        top: -40px;
+                        left: 0;
+                        color: #fff;
+                        font-size: 16px;
+                        font-family: "Montserrat";
+                        right: 0;
+                        margin: auto;
+                        width: fit-content;
+                        visibility: hidden;
+                        transition: 0.8s all ease-in-out;
+                        transform: translateY(-10px);
+                    }
+                    &:hover{
+                        img{
+                            filter: opacity(1);
+                        }
+                        .service-title{
+                            visibility: visible;
+                            transform: translateY(0);
+                            transition: 0.8s all ease-in-out;
+                        }
+                    }
+                }
+                @keyframes autoslide {
+                    0% { transform: translate(0,50px); }
+	                100% { transform: translate(calc(-100px * 5),50px)}
+                }
             }
         }
     }

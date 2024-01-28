@@ -14,7 +14,12 @@ function Header() {
     return (
       <>
         <header className="header-section">
-            <a className="header-title" href='javascript:;'>Lysosoft</a>
+            <a className="header-title" href='javascript:;'>
+              <p className="pre-word">Ly</p>
+              <p className="mid-word">soso</p>
+              <p className="post-word">ft</p>
+              <p className="hover-text">your Digital Growth</p>
+            </a>
             <ul className="services-list">
                 <li className="single-list"><a href="javascript:;">Projects</a></li>
                 <li className="single-list"><a href="javascript:;">Services</a></li>

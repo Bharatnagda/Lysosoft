@@ -23,6 +23,40 @@
         font-family:"Montserrat Alternates";
         font-weight: 500;
         font-size: 34px;
+        .pre-word,.mid-word,.post-word,.hover-text{
+            display: inline-block;
+        }
+        .hover-text{
+           visibility: hidden;
+            transition: 0.2s all ease-in-out;
+            transform: translateX(-100px);
+            text-transform: lowercase;
+        }
+        &:hover{
+            .mid-word{
+                visibility:collapse;
+                transition: 0.3s all ease-in-out;
+                transform: translateY(-20px);
+            }
+            .post-word{
+                transform: translateX(-75px);
+                transition: 0.3s all ease-in-out;
+            }
+            .hover-text{
+                visibility: visible;
+                margin-left: 5px;
+                transform: translateX(-70px);
+                transition: 0.3s all ease-in-out;
+            }
+        }
+        .mid-word,.hover-text{
+            color: #9D00FF;
+            text-align: center;
+            text-shadow: 0px 0px 4px #9D00FF;
+            font-family: "Montserrat Alternates";
+            font-size: 34px;
+            line-height: 130%;
+        }
     }
     .services-list{
         display: flex;
