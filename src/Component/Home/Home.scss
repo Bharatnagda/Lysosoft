@@ -42,7 +42,37 @@
             transform-origin: top left;
             width: 0;
         }
+        &:hover{
+            color: #fff;
+            &:after{
+                height: 100%;
+                width: 135%;
+            }
+    }
         
+    }
+    .card-head{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        position: absolute;
+        left: 1.25rem;
+        top: 1.25rem;
+        right: auto;
+        bottom: auto;
+        z-index: 20;
+        padding: 0.25rem 0.375rem;
+        background: #0038ff;
+        color: #fff;
+        border-radius: 0.25rem ;
+        font-family: "Montserrat";
+        font-size: 13px;
+        line-height: 1;
+        font-weight: 600;
+        .card-svg{
+            display: block;
+            vertical-align: middle;
+        }
     }
     .hero-card{
         padding-top: 2rem;
@@ -66,13 +96,7 @@
             &:hover{
                 transition: 0.5s all ease-in-out;
                 box-shadow: 0 0 20px rgb(255,255,255,.5);
-                .action-btn:hover{
-                        color: #fff;
-                        &:after{
-                            height: 100%;
-                            width: 135%;
-                        }
-                }
+                
             }
             .text-box{
                 display: flex;
@@ -116,29 +140,7 @@
                     transition: 0.5s all ease-in-out;
                 }
             }
-            .card-head{
-                display: flex;
-                align-items: center;
-                gap: 5px;
-                position: absolute;
-                left: 1.25rem;
-                top: 1.25rem;
-                right: auto;
-                bottom: auto;
-                z-index: 20;
-                padding: 0.25rem 0.375rem;
-                background: #0038ff;
-                color: #fff;
-                border-radius: 0.25rem ;
-                font-family: "Montserrat";
-                font-size: .875rem;
-                line-height: 1;
-                font-weight: 600;
-                .card-svg{
-                    display: block;
-                    vertical-align: middle;
-                }
-            }
+            
             .text-box{
                 display: flex;
                 max-width: 19rem;
@@ -195,11 +197,144 @@
                         }
                     }
                 }
-                @keyframes autoslide {
-                    0% { transform: translate(0,50px); }
-	                100% { transform: translate(calc(-100px * 5),50px)}
-                }
+               
             }
         }
     }
+    .mid-section{
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        flex-wrap: wrap;
+        .left-mid{
+            width: 35%;
+            height: 100%;
+            .top-left{
+                margin: 0 0 20px;
+                height: 15rem;
+                position: relative;
+                padding: 15px;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                align-items: flex-end;
+                background-image: linear-gradient(35deg,rgba(0,176,119,0),rgba(0,176,119,.4));
+                border-radius: 2rem;
+                transition: 0.5s all ease-in-out;
+                opacity: 0.8;
+                overflow: hidden;
+                &:hover{
+                    opacity: 1;
+                    transition: 0.5s all ease-in-out;
+                    box-shadow: 0 0 20px rgb(255,255,255,.5);
+                    
+                }
+                .player-cards{
+                    transform: translate(20px,20px);
+                    position: relative;
+                    width: 50%;
+                    height: 100%;
+                    padding: 5px;
+                    
+                    img{
+                        // background: #fff;
+                        padding: 5px;
+                        border-radius: 0.75rem;
+                        position: absolute;
+                        bottom: -12rem;
+                        right: -3rem;
+                        left: auto;
+                        top: auto;
+                        width: 100%;
+                        height: min-content;
+                        &.play-card1{
+                            z-index: 2;
+                        }
+                        &.play-card2{
+                            z-index: 1;
+                            right: -2rem;
+                            bottom: -10rem;
+                        }
+                    }
+                }
+            }
+            .mid-left{
+                position: relative;
+                background: url(../../Assets/Images/gradient1.png) right #000;
+                background-size: cover;
+                padding: 1.25rem;
+                margin: 20px 0;
+                border-radius: 2rem;
+                opacity: 0.8;
+                overflow: hidden;
+                &:hover{
+                    opacity: 1;
+                    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+                }
+                .employee-card{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    .emp-detail{
+                        width: 45%;
+                        .emp-head{
+                            font-family: "Montserrat";
+                            font-size: 36px;
+                            line-height: 1.2;
+                            font-weight: 600;
+                            color: #fff;
+                        }
+                        .emp-desc{
+                            font-size: 16px;
+                            font-family: "Montserrat";
+                            line-height: 1.4;
+                            font-weight: 400;
+                            color: #fff;
+                        }
+                    }
+                    .employee-list{
+                        width: 55%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        transform: translateX(85px);
+                        .single-list{
+                            white-space: normal;
+                            animation: autoslideY 6s linear infinite;
+                            display: flex;
+                            padding: 4px 16px 4px 4px;
+                            align-items: center;
+                            grid-column-gap: 8px;
+                            border-radius: 100vw;
+                            background-color: hsla(0,0%,100%,.15);
+                            img{
+                                width: 2.5rem;
+                                height: 2.5rem;
+                                border-radius: 50%;
+                            }
+                            .emp-desig{
+                                font-size: 16px;
+                                font-family: "Montserrat";
+                                font-weight: 500;
+                                color: #fff;
+                                text-transform: capitalize;
+                            }
+                        }
+                        @keyframes autoslideY {
+                            0% { transform: translate(0,10px); }
+                            100% { transform: translate(0,-100px)}
+                        }
+                    }
+                }
+            }
+        }
+        .right-mid{
+            width: 60%;
+        }
+    }
+}
+@keyframes autoslide {
+    0% { transform: translate(0,50px); }
+    100% { transform: translate(calc(-100px * 5),50px)}
 }
