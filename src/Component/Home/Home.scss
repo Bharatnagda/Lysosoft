@@ -74,6 +74,24 @@
             vertical-align: middle;
         }
     }
+    .redirect-svg{
+        position: absolute;
+        top: 1.25rem;
+        right: 1.25rem;
+        visibility: hidden;
+        transition: 0.5s all ease-in-out;
+        font-size:18px;
+        font-weight: 500;
+        font-family: "Montserrat";
+        background: hsla(0,0%,100%,.2);
+        border-radius: 0.5rem;
+        padding: 0.75rem 0.85rem;
+        color: #fff;
+        transform: translateY(20px);
+        display: block;
+        cursor: pointer;
+        transition: 0.3s all ease-in-out;
+    }
     .hero-card{
         padding-top: 2rem;
         padding-bottom: 2rem;
@@ -116,21 +134,7 @@
             padding-top: 4rem;
             transition: 0.5s all ease-in-out;
             overflow: hidden;
-            .redirect-svg{
-                position: absolute;
-                top: 1.25rem;
-                right: 1.25rem;
-                visibility: hidden;
-                transition: 0.5s all ease-in-out;
-                font-size: 0.875rem;
-                background: hsla(0,0%,100%,.2);
-                border-radius: 0.5rem;
-                padding: 0.75rem;
-                color: #fff;
-                transform: translateY(20px);
-                display: block;
-                cursor: pointer;
-            }
+            
             &:hover{
                 transition: 0.5s all ease-in-out;
                 box-shadow: 0 0 5px rgb(255,255,255,.5);
@@ -270,6 +274,11 @@
                 &:hover{
                     opacity: 1;
                     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+                    .redirect-svg{
+                        transform: translateY(0);
+                        visibility: visible;
+                        transition: 0.3s all ease-in-out;
+                    }
                 }
                 .employee-card{
                     display: flex;
@@ -321,10 +330,7 @@
                                 text-transform: capitalize;
                             }
                         }
-                        @keyframes autoslideY {
-                            0% { transform: translate(0,10px); }
-                            100% { transform: translate(0,-100px)}
-                        }
+                        
                     }
                 }
             }
@@ -337,4 +343,8 @@
 @keyframes autoslide {
     0% { transform: translate(0,50px); }
     100% { transform: translate(calc(-100px * 5),50px)}
+}
+@keyframes autoslideY {
+    0% { transform: translate(0,50px); }
+    100% { transform: translate(0,calc(-50px * 5))}
 }
