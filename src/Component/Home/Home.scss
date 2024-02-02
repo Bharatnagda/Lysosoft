@@ -76,6 +76,7 @@
     }
     .redirect-svg{
         position: absolute;
+        z-index: 99;
         top: 1.25rem;
         right: 1.25rem;
         visibility: hidden;
@@ -180,8 +181,9 @@
                         position: absolute;
                         top: -40px;
                         left: 0;
-                        color: #fff;
-                        font-size: 16px;
+                        color: #003acf;
+                        font-weight: 500;
+                        font-size: 14px;
                         font-family: "Montserrat";
                         right: 0;
                         margin: auto;
@@ -189,6 +191,10 @@
                         visibility: hidden;
                         transition: 0.8s all ease-in-out;
                         transform: translateY(-10px);
+                        background: #fff;
+                        padding: 5px;
+                        border-radius: 8px;
+                        white-space: nowrap;
                     }
                     &:hover{
                         img{
@@ -208,7 +214,7 @@
     .mid-section{
         display: flex;
         align-items: flex-start;
-        gap: 15px;
+        gap: 25px;
         flex-wrap: wrap;
         .left-mid{
             width: 35%;
@@ -271,6 +277,7 @@
                 border-radius: 2rem;
                 opacity: 0.8;
                 overflow: hidden;
+                height: 30rem;
                 &:hover{
                     opacity: 1;
                     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
@@ -284,11 +291,12 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: flex-end;
+                    height: 100%;
                     .emp-detail{
-                        width: 45%;
+                        width: 50%;
                         .emp-head{
                             font-family: "Montserrat";
-                            font-size: 36px;
+                            font-size: 34px;
                             line-height: 1.2;
                             font-weight: 600;
                             color: #fff;
@@ -302,12 +310,12 @@
                         }
                     }
                     .employee-list{
-                        width: 55%;
+                        width: 40%;
                         height: 100%;
                         display: flex;
                         flex-direction: column;
                         gap: 10px;
-                        transform: translateX(85px);
+                        transform: translateX(45px);
                         .single-list{
                             white-space: normal;
                             animation: autoslideY 6s linear infinite;
@@ -336,13 +344,103 @@
             }
         }
         .right-mid{
-            width: 60%;
+            width: 62%;
+            .top-right{
+                .service-card{
+                    position: relative;
+                    background: url(../../Assets/Images/gradient2.png) right #000;
+                    background-size: cover;
+                    border-radius: 2rem;
+                    padding-top: 4rem;
+                    transition: 0.5s all ease-in-out;
+                    overflow: hidden;
+                    &:hover{
+                        transition: 0.5s all ease-in-out;
+                        box-shadow: 0 0 5px rgb(255,255,255,.5);
+                        .redirect-svg{
+                            transform: translateY(0);
+                            visibility: visible;
+                            transition: 0.5s all ease-in-out;
+                        }
+                    }
+                }
+                .service-detail{
+                    max-width: 42rem;
+                    padding-top: 100px;
+                    margin: auto;
+                    width: fit-content;
+                    text-align: center;
+                    .service-title{
+                        font-size: 36px;
+                        line-height: 130%;
+                        font-family: "Montserrat";
+                        color: #fff;
+                        margin-bottom: 10px;
+                    }
+                    .service-desc{
+                        font-size: 18px;
+                        line-height: 130%;
+                        color: #fff;
+                        font-family: "Montserrat";
+                    }
+                }
+                .service-box{
+                    margin: 40px 0 60px;
+                    display: flex;
+                    gap: 20px;
+    
+                    .marq-class{
+                        display: flex;
+                    }
+                    .sinlge-service{
+                        display: block;
+                        animation: autoslide 6s linear infinite;
+                        border-radius: 0.5rem;
+                        margin: 0 10px;
+                        position: relative;
+                        img{
+                            border-radius: 0.5rem;
+                            filter:opacity(0.6);
+                        }
+                        .service-title{
+                            position: absolute;
+                            top: -40px;
+                            left: 0;
+                            color: #003acf;
+                            font-weight: 500;
+                            font-size: 14px;
+                            font-family: "Montserrat";
+                            right: 0;
+                            margin: auto;
+                            width: fit-content;
+                            visibility: hidden;
+                            transition: 0.8s all ease-in-out;
+                            transform: translateY(-10px);
+                            background: #fff;
+                            padding: 5px;
+                            border-radius: 8px;
+                            white-space: nowrap;
+                        }
+                        &:hover{
+                            img{
+                                filter: opacity(1);
+                            }
+                            .service-title{
+                                visibility: visible;
+                                transform: translateY(0);
+                                transition: 0.8s all ease-in-out;
+                            }
+                        }
+                    }
+                   
+                }
+            }
         }
     }
 }
 @keyframes autoslide {
     0% { transform: translate(0,50px); }
-    100% { transform: translate(calc(-100px * 5),50px)}
+    100% { transform: translate(calc(-50px * 5),50px)}
 }
 @keyframes autoslideY {
     0% { transform: translate(0,50px); }
