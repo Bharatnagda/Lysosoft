@@ -3,6 +3,15 @@ import service from '../../Assets/Images/service1.jpg';
 import service2 from '../../Assets/Images/service2.jpg';
 import service3 from '../../Assets/Images/service3.jpg';
 import employee1 from '../../Assets/Images/employee1.jpg';
+import loopimg from '../../Assets/Images/loop-img.svg';
+import ser1 from '../../Assets/Images/ser1.svg';
+import ser2 from '../../Assets/Images/ser2.svg';
+import ser3 from '../../Assets/Images/ser3.svg';
+import ser4 from '../../Assets/Images/ser4.svg';
+import ser5 from '../../Assets/Images/ser5.svg';
+import ser6 from '../../Assets/Images/ser6.svg';
+import ser7 from '../../Assets/Images/ser7.svg';
+
 function Home(){
     return (
         <>
@@ -139,12 +148,56 @@ function Home(){
                             </div>
                         </div>
                         <div className="bottom-left">
-
+                            {/* Pending */}
                         </div>
                     </div>
                     <div className="right-mid">
                         <div className="top-right">
-
+                            <div className="service-card">
+                                <p class="card-head">
+                                    <span class="card-svg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--heroicons" width="15px" height="15px" preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20"><path fill="currentColor" d="M11.983 1.907a.75.75 0 0 0-1.292-.657l-8.5 9.5A.75.75 0 0 0 2.75 12h6.572l-1.305 6.093a.75.75 0 0 0 1.292.657l8.5-9.5A.75.75 0 0 0 17.25 8h-6.572l1.305-6.093Z"></path></svg>
+                                    </span>Services
+                                </p>
+                                <div className="service-detail">
+                                    <h2 className="service-title">
+                                        All you need for your next big step
+                                    </h2>
+                                    <p className="service-desc">
+                                        From marketing moves and strategies to design and tech, we've got everything to boost your growth.
+                                    </p>
+                                </div>
+                                <div className="service-box">
+                                    <a href="javascript:;" className="sinlge-service">
+                                        <img src={ser1} alt="" />
+                                        <span className="service-title">Websites ↗</span>
+                                    </a>
+                                    <a href="javascript:;" className="sinlge-service">
+                                        <img src={ser2} alt="" />
+                                        <span className="service-title">Performance Analysis ↗</span>
+                                    </a>
+                                    <a href="javascript:;" className="sinlge-service">
+                                        <img src={ser3} alt="" />
+                                        <span className="service-title">SEM ↗</span>
+                                    </a>
+                                    <a href="javascript:;" className="sinlge-service">
+                                        <img src={ser4} alt="" />
+                                        <span className="service-title">CRM & Automation ↗</span>
+                                    </a>
+                                    <a href="javascript:;" className="sinlge-service">
+                                        <img src={ser5} alt="" />
+                                        <span className="service-title">E-Commerce ↗</span>
+                                    </a>
+                                    <a href="javascript:;" className="sinlge-service">
+                                        <img src={ser6} alt="" />
+                                        <span className="service-title">Audience Insights ↗</span>
+                                    </a>
+                                    <a href="javascript:;" className="sinlge-service">
+                                        <img src={ser7} alt="" />
+                                        <span className="service-title">UI & UX ↗</span>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                         <div className="r-mid-left">
 
