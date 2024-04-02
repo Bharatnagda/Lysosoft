@@ -11,6 +11,12 @@ function Header() {
         header.classList.remove(toggleClass);
       }
     });
+
+
+
+
+// Commit 
+
     return (
       <>
         <header className="header-section">
